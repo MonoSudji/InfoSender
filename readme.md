@@ -13,7 +13,7 @@
 
 # Rule
 ### 1. Dont use to spy on other players or to get information about other players.
-### 2. Dont use to get information about the server.
+### 2. Dont use to get information about the server to your advantage.
 # ``` Hiroshima was not blown up by its creator.```
 
 # This soft declared a `` MIT licance `` 
