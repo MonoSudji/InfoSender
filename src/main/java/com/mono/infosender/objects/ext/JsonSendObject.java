@@ -9,7 +9,7 @@ public class JsonSendObject<T> extends AbsJsonSendObject<T> {
     @Override
     public String toJson() {
         Class clazz = getObject().getClass();
-        List<Field> fields = List.of(clazz.getFields());
+        List<Field> fields = List.of(clazz.getDeclaredFields());
         StringBuilder json = new StringBuilder("{");
         for (Field field : fields) {
             try {
