@@ -9,7 +9,6 @@ import java.net.http.HttpClient;
 
 
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public abstract class AbsJsonSendObject<T>{
