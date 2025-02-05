@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Getter
-public class PlayersLoader<P extends JavaPlugin> extends AbsLoader {
+public class ExamplePlayersLoader<P extends JavaPlugin> extends AbsLoader {
 
     private P pluginName;
     private HashMap<String, Player> players = new HashMap<>();
