@@ -1,9 +1,11 @@
-package com.mono.infosender.model;
+package com.mono.infosender.objects.ext;
+
+import com.mono.infosender.objects.AbsJsonSendObject;
 
 import java.lang.reflect.Field;
 import java.util.List;
 
-public class SendObject<T> extends AbsSendObject<T>{
+public class JsonSendObject<T> extends AbsJsonSendObject<T> {
     @Override
     public String toJson() {
         Class clazz = getObject().getClass();

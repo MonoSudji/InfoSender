@@ -1,6 +1,7 @@
-package com.mono.infosender.senders;
+package com.mono.infosender.senders.impl;
 
-import com.mono.infosender.model.SendObject;
+import com.mono.infosender.objects.ext.JsonSendObject;
+import com.mono.infosender.senders.AbstractSender;
 
 
 import java.io.IOException;
@@ -9,9 +10,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public abstract  class AbsSender<T extends SendObject> implements AbstractSender<T> {
+public abstract class AbsJsonSender<T extends JsonSendObject> implements AbstractSender<T> {
 
-    public void send(String address, Object object) throws IOException, InterruptedException {
+    protected void send(String address, Object object) throws IOException, InterruptedException {
+        JsonSendObject jsonSendObject = new JsonSendObject();
         HttpClient client = HttpClient.newHttpClient();
         client.send(HttpRequest.newBuilder()
                 .uri(URI.create(address))

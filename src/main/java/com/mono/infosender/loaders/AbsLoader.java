@@ -1,12 +1,12 @@
 package com.mono.infosender.loaders;
 
-import java.util.ArrayList;
+import java.util.Map;
 
-public abstract class AbsLoader<T> implements Loader {
-    ArrayList<T> bukkit = getBukkit();
+public abstract class AbsLoader<K , V> implements Loader {
+    Map<K , V> bukkit = getBukkit();
 
     @Override
-    public ArrayList<T> getBukkit() {
+    public Map<K , V> getBukkit() {
         return bukkit;
     }
 }
