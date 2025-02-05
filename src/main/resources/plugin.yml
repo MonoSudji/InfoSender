@@ -1,4 +1,0 @@
-name: InfoSender
-version: '${project.version}'
-main: com.mono.infosender.InfoSender
-api-version: '1.16'
