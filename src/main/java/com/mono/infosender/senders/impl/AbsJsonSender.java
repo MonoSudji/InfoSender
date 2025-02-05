@@ -14,10 +14,12 @@ public abstract class AbsJsonSender<T extends JsonSendObject> implements Abstrac
 
     protected void send(String address, Object object) throws IOException, InterruptedException {
         JsonSendObject jsonSendObject = new JsonSendObject();
+        jsonSendObject.setObject(object);
+
         HttpClient client = HttpClient.newHttpClient();
         client.send(HttpRequest.newBuilder()
                 .uri(URI.create(address))
-                .POST(HttpRequest.BodyPublishers.ofString(object.toString()))
+                .POST(HttpRequest.BodyPublishers.ofString(jsonSendObject.toJson()))
                 .build(), HttpResponse.BodyHandlers.ofString());
 
     }
